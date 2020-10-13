@@ -9,7 +9,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         btnUno = (Button)findViewById(R.id.Uno);
         btnDos = (Button)findViewById(R.id.Dos);
         btnTres = (Button)findViewById(R.id.Tres);
@@ -28,16 +27,13 @@ public class MainActivity extends AppCompatActivity {
         Resultado = (TextView)findViewById(R.id.Etiqueta);
         btnPunto = (Button)findViewById(R.id.Punto);
         btnIgual = (Button)findViewById(R.id.Igual);
-
         btnUno.setOnClickListener(new View.OnClickListener(){
-
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "1";
                 Resultado.setText(mostrar);
             }
         });
-
         btnDos.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
