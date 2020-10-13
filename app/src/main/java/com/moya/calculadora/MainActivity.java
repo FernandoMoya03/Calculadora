@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnCuatro.setOnClickListener(new View.OnClickListener(){
-           
+
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "4";
