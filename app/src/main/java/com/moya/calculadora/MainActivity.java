@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnIgual = (Button)findViewById(R.id.Igual);
 
         btnUno.setOnClickListener(new View.OnClickListener(){
-            @Override
+
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "1";
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnDos.setOnClickListener(new View.OnClickListener(){
-            @Override
+
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "2";
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnTres.setOnClickListener(new View.OnClickListener(){
-            @Override
+
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "3";
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnCuatro.setOnClickListener(new View.OnClickListener(){
-            @Override
+           
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "4";
