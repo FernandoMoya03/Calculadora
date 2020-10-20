@@ -1,9 +1,33 @@
 package com.moya.calculadora;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+Button btnUno;
+    Button btnDos;
+    Button btnTres;
+    Button btnCuatro;
+    Button btnCinco;
+    Button btnSeis;
+    Button btnSiete;
+    Button btnOcho;
+    Button btnNueve;
+    Button btnSuma;
+    Button btnResta;
+Button btnMultiplica;
+    Button btnDivide;
+    Button btnClean;
+    Button btnBorrar;
+    Button btnPunto;
+    Button btnIgual;
+    TextView Resultado;
+    String mostrar;
+    String reserva;
+    int resultado;
+    String operador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Resultado = (TextView)findViewById(R.id.Etiqueta);
         btnPunto = (Button)findViewById(R.id.Punto);
         btnIgual = (Button)findViewById(R.id.Igual);
+
         btnUno.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
@@ -35,16 +60,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btnDos.setOnClickListener(new View.OnClickListener(){
-
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "2";
                 Resultado.setText(mostrar);
             }
         });
-
         btnTres.setOnClickListener(new View.OnClickListener(){
-
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "3";
@@ -53,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnCuatro.setOnClickListener(new View.OnClickListener(){
-
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "4";
@@ -163,19 +184,19 @@ public class MainActivity extends AppCompatActivity {
                 mostrar = Resultado.getText().toString();
                 mostrar = mostrar + "1";
                 if(operador.equals("-")){
-                    resultado = Double.parseDouble(reserva) - Double.parseDouble(Resultado.getText().toString());
+                    resultado = (int) (Double.parseDouble(reserva) - Double.parseDouble(Resultado.getText().toString()));
                     Resultado.setText(String.valueOf(resultado));
                 }
                 if(operador.equals("+")){
-                    resultado = Double.parseDouble(reserva) + Double.parseDouble(Resultado.getText().toString());
+                    resultado = (int) (Double.parseDouble(reserva) + Double.parseDouble(Resultado.getText().toString()));
                     Resultado.setText(String.valueOf(resultado));
                 }
                 if(operador.equals("/")){
-                    resultado = Double.parseDouble(reserva) / Double.parseDouble(Resultado.getText().toString());
+                    resultado = (int) (Double.parseDouble(reserva) / Double.parseDouble(Resultado.getText().toString()));
                     Resultado.setText(String.valueOf(resultado));
                 }
                 if(operador.equals("*")){
-                    resultado = Double.parseDouble(reserva) * Double.parseDouble(Resultado.getText().toString());
+                    resultado = (int) (Double.parseDouble(reserva) * Double.parseDouble(Resultado.getText().toString()));
                     Resultado.setText(String.valueOf(resultado));
                 }
             }
