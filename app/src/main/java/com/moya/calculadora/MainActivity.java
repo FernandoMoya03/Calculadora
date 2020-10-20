@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 Button btnUno;
+Button btnCero;
     Button btnDos;
     Button btnTres;
     Button btnCuatro;
@@ -33,6 +34,7 @@ Button btnMultiplica;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnCero = (Button)findViewById(R.id.Cero);
         btnUno = (Button)findViewById(R.id.Uno);
         btnDos = (Button)findViewById(R.id.Dos);
         btnTres = (Button)findViewById(R.id.Tres);
@@ -52,6 +54,13 @@ Button btnMultiplica;
         btnPunto = (Button)findViewById(R.id.Punto);
         btnIgual = (Button)findViewById(R.id.Igual);
 
+        btnCero.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                mostrar = Resultado.getText().toString();
+                mostrar = mostrar + "0";
+                Resultado.setText(mostrar);
+            }
+        });
         btnUno.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 mostrar = Resultado.getText().toString();
