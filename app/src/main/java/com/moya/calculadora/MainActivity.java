@@ -135,6 +135,7 @@ Button btnMultiplica;
             public void onClick(View v){
                 reserva = Resultado.getText().toString();
                 operador = "+";
+                mostrar = mostrar + "+";
                 Resultado.setText("");
             }
         });
@@ -143,6 +144,7 @@ Button btnMultiplica;
             public void onClick(View v){
                 reserva = Resultado.getText().toString();
                 operador = "-";
+                mostrar = mostrar + "-";
                 Resultado.setText("");
             }
         });
@@ -151,6 +153,7 @@ Button btnMultiplica;
             public void onClick(View v){
                 reserva = Resultado.getText().toString();
                 operador = "*";
+                mostrar = mostrar + "*";
                 Resultado.setText("");
             }
         });
@@ -159,15 +162,18 @@ Button btnMultiplica;
             public void onClick(View v){
                 reserva = Resultado.getText().toString();
                 operador = "/";
+                mostrar = mostrar + "/";
                 Resultado.setText("");
             }
         });
 
         btnPunto.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                mostrar = Resultado.getText().toString();
-                mostrar = mostrar + ".";
-                Resultado.setText(mostrar);
+
+                    mostrar = Resultado.getText().toString();
+                    mostrar = mostrar + ".";
+                    Resultado.setText(mostrar);
+               
             }
         });
 
